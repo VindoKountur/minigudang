@@ -1,0 +1,1 @@
+export const LINKAPI : string = "https://virtserver.swaggerhub.com/swaggerpayment/GetDataBuilding/1.0.0/building_data";

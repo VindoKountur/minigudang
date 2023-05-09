@@ -1,9 +1,10 @@
+import Image from 'next/image'
 import axios from 'axios'
 
-import Dashboard from '@/components/Dashboard'
+import TableGedung from '../../components/Tablegedung'
 
-import { TGedung } from '../lib/types'
-import { LINKAPI } from '../lib/const'
+import { TGedung } from '../../lib/types'
+import { LINKAPI } from '../../lib/const'
 
 
 const getData = async () => {
@@ -16,7 +17,8 @@ export default async function Home() {
   const data : TGedung[] = await getData()
   return (
     <main className="p-4 overflow-auto w-full bg-slate-200">
-      <Dashboard dataGedung={data} />
+      <h1 className='text-lg font-bold'>Daftar Gedung</h1>
+      <TableGedung dataGedung={data} />
     </main>
   )
 }
